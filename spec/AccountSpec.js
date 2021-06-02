@@ -34,13 +34,13 @@ describe("Account", () => {
   
   it("records each deposit", () => {
     account.deposit(100)
-    expect(account.transactions).toEqual([{date:"2/6/2021", credit:"credit", amount:100, debit:""}])
+    expect(account.transactions).toEqual([{date:"2/6/2021", credit:"credit", amount:100, debit:"", balance:100}])
   })
 
   it("records each withdrawal", () => {
     account.deposit(100)
     account.withdraw(50)
-    expect(account.transactions[1]).toEqual({date:"2/6/2021", debit:"debit", amount:50, credit:""})
+    expect(account.transactions[1]).toEqual({date:"2/6/2021", debit:"debit", amount:50, credit:"", balance:50})
   })
 
   it("has a history of all transactions", () => {
@@ -49,11 +49,9 @@ describe("Account", () => {
     account.withdraw(50)
     }
     expect(account.transactions.length).toEqual(8)
-    expect(account.transactions[4]).toEqual({date:"2/6/2021", credit:"credit", amount:100, debit:""})
-    expect(account.transactions[7]).toEqual({date:"2/6/2021", debit:"debit", amount:50, credit:""})
+    expect(account.transactions[4]).toEqual({date:"2/6/2021", credit:"credit", amount:100, debit:"", balance:200})
+    expect(account.transactions[7]).toEqual({date:"2/6/2021", debit:"debit", amount:50, credit:"", balance:200})
   })
 
-  // Displaying statement on the console in the desired format
-
- 
+  
 })

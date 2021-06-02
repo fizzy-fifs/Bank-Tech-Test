@@ -5,9 +5,9 @@ class Account{
   }
 
   deposit(amount){
-    const deposit = {date: todaysDate(), credit: "credit", amount: amount, debit: ""}
-    this.transactions.push(deposit)
     this.balance += amount
+    const deposit = {date: todaysDate(), credit: "credit", amount: amount, debit: "", balance: this.balance}
+    this.transactions.push(deposit)
   }
 
   withdraw(amount){
@@ -18,9 +18,9 @@ class Account{
         return e.message
       }
     } else {
-      const withdrawal = {date: todaysDate(), debit:"debit", amount: amount, credit:""}
-      this.transactions.push(withdrawal)
       this.balance -= amount
+      const withdrawal = {date: todaysDate(), debit:"debit", amount: amount, credit:"", balance: this.balance}
+      this.transactions.push(withdrawal)
     } 
   }
 
