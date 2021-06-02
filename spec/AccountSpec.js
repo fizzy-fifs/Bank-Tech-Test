@@ -53,5 +53,5 @@ describe("Account", () => {
     expect(account.transactions[7]).toEqual({date:"2/6/2021", debit:"debit", amount:50, credit:"", balance:200})
   })
 
-  
+ 
 })

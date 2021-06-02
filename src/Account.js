@@ -2,11 +2,18 @@ class Account{
   constructor(){
     this.balance = 0
     this.transactions = []
+    
   }
 
+  
+
   deposit(amount){
+    // amount = amount.toFixed(2)
+    
     this.balance += amount
-    const deposit = {date: todaysDate(), credit: "credit", amount: amount, debit: "", balance: this.balance}
+    console.log(this.balance)
+
+    const deposit = {date: todaysDate(), credit: amount, debit: "", balance: this.balance}
     this.transactions.push(deposit)
   }
 
@@ -19,13 +26,12 @@ class Account{
       }
     } else {
       this.balance -= amount
-      const withdrawal = {date: todaysDate(), debit:"debit", amount: amount, credit:"", balance: this.balance}
+      const withdrawal = {date: todaysDate(), debit:amount, credit:"", balance: this.balance}
       this.transactions.push(withdrawal)
     } 
   }
 
-  
-
+ 
 }
 
 let todaysDate = () => {
