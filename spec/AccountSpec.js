@@ -25,5 +25,14 @@ describe("Account", () => {
     expect(account.withdraw(15)).toEqual("Insufficient Funds")
   })
 
+  // Storing each transaction
+
+  it("transactions starts as an empty array", () => {
+    expect(account.transactions).toEqual([])
+  })
   
+  it("records each transaction", () => {
+    account.deposit(100)
+    expect(account.transactions).toEqual([{date:"2/6/2021", type:"credit", amount:100}])
+  })
 })

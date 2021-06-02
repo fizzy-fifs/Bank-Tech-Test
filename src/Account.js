@@ -4,8 +4,11 @@ class Account{
     this.transactions = []
   }
 
+ 
+
   deposit(amount){
-    
+    const deposit = {date: todaysDate(), type: "credit", amount: amount}
+    this.transactions.push(deposit)
     this.balance += amount
   }
 
@@ -18,10 +21,15 @@ class Account{
       }
     } else {
       this.balance -= amount
-    }
-    
+    } 
   }
-
-  
 }
 
+let todaysDate = () => {
+  let today = new Date(); 
+  let day = today.getDate()
+  let month = today.getMonth() + 1
+  let year = today.getFullYear()
+  let date = `${day}/${month}/${year}`
+  return date
+}
