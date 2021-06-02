@@ -13,4 +13,12 @@ describe("Account", () => {
     account.deposit(5)
     expect(account.balance).toEqual(5)
   })
+
+  it("can decrease the balance", () => {
+    account.deposit(100)
+    account.withdraw(5)
+    expect(account.balance).toEqual(95)
+  })
+
+  
 })
