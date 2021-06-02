@@ -20,5 +20,10 @@ describe("Account", () => {
     expect(account.balance).toEqual(95)
   })
 
+  it("users can not withdraw more than their balance", () => {
+    account.deposit(10)
+    expect(account.withdraw(15)).toEqual("Insufficient Funds")
+  })
+
   
 })

@@ -10,8 +10,15 @@ class Account{
   }
 
   withdraw(amount){
-    this.balance -= amount
-    
+    if (amount > this.balance){
+      try{
+        throw new Error("Insufficient Funds")
+      } catch (e){
+        return e.message
+      }
+    } else {
+      this.balance -= amount
+    }
     
   }
 
