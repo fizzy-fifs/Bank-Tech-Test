@@ -20,6 +20,12 @@ class Account{
         return e.message
       }
     } else {
+      const withdrawal = {date: todaysDate(), type:"debit", amount: amount}
+      console.log(withdrawal)
+
+      this.transactions.push(withdrawal)
+      console.log(this.transactions)
+      
       this.balance -= amount
     } 
   }

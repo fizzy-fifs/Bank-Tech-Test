@@ -31,8 +31,14 @@ describe("Account", () => {
     expect(account.transactions).toEqual([])
   })
   
-  it("records each transaction", () => {
+  it("records each deposit", () => {
     account.deposit(100)
     expect(account.transactions).toEqual([{date:"2/6/2021", type:"credit", amount:100}])
+  })
+
+  it("records each withdrawal", () => {
+    account.deposit(100)
+    account.withdraw(50)
+    expect(account.transactions[1]).toEqual({date:"2/6/2021", type:"debit", amount:50})
   })
 })
