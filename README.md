@@ -30,6 +30,9 @@ The following was the acceptance criteria:
 ### Testing Framework
   * Jasmine 3.7.1
 
+  ### Linting
+  * ESLint 7. 27. 0
+
 ## Getting started
 To install simply clone the repo and 'cd' into the application directory.
 
