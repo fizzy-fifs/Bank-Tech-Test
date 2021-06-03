@@ -5,15 +5,9 @@ class Account{
     
   }
 
-  
-
   deposit(amount){
-    // amount = amount.toFixed(2)
-    
     this.balance += amount
-    console.log(this.balance)
-
-    const deposit = {date: todaysDate(), credit: amount, debit: "", balance: this.balance}
+    const deposit = {date: todaysDate(), credit:amount.toFixed(2), debit: "", balance: this.balance.toFixed(2)}
     this.transactions.push(deposit)
   }
 
@@ -26,13 +20,18 @@ class Account{
       }
     } else {
       this.balance -= amount
-      const withdrawal = {date: todaysDate(), debit:amount, credit:"", balance: this.balance}
+      const withdrawal = {date: todaysDate(), debit:amount.toFixed(2), credit:"", balance: this.balance.toFixed(2)}
       this.transactions.push(withdrawal)
     } 
   }
 
- 
+  printStatement(){
+    console.log("date || credit || debit || balance")
+    this.transactions.reverse().forEach(t => console.log(`${t.date} ||  ${t.credit} || ${t.debit} || ${t.balance}`))
+  }
 }
+
+//todaysDate() function 
 
 let todaysDate = () => {
   let today = new Date(); 
@@ -42,3 +41,4 @@ let todaysDate = () => {
   let date = `${day}/${month}/${year}`
   return date
 }
+
