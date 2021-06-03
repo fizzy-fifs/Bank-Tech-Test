@@ -1,8 +1,7 @@
 class Account{
   constructor(){
     this.balance = 0
-    this.transactions = []
-    
+    this.transactions = [] 
   }
 
   deposit(amount){
@@ -31,7 +30,7 @@ class Account{
   }
 }
 
-//todaysDate() function 
+//todaysDate() function retrieves date in the desired format
 
 let todaysDate = () => {
   let today = new Date(); 
@@ -41,4 +40,3 @@ let todaysDate = () => {
   let date = `${day}/${month}/${year}`
   return date
 }
-

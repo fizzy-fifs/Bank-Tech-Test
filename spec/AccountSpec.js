@@ -1,6 +1,6 @@
 'use strict'
 describe("Account", () => {
-  // todaysDate() function allows the test to run using today's date in the desired format
+  // todaysDate() function retrieves date in the desired format
   let todaysDate = () => {
     let today = new Date(); 
     let day = today.getDate()
