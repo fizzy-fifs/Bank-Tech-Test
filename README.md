@@ -1,7 +1,7 @@
-# # Bank-Tech-Test
-A simple banking program that allows users to create an account, make deposits, make withdrawals and print an account statement. This project is a result of a tech test written in part fulfilment of the Makers Academy Coding Bootcamp
+#  Bank-Tech-Test
+A simple banking program that allows users to create an account, make deposits, make withdrawals and print an account statement. This project is the result of a tech test written in part fulfilment of the Makers Academy Coding Bootcamp.
 
-The program was designed to meet the following requirements:
+This program is designed to meet the following requirements:
   * You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
   * Deposits, withdrawal.
   * Account statement (date, amount, balance) printing.
@@ -40,6 +40,7 @@ $ cd Bank-Tech-Test
 
 ## Usage
 This application is designed to be run on the JavaScript console.
+
 To run: 
   * Open the JavaScript console in a browser of your choice
 
@@ -54,6 +55,6 @@ Users can use the following methods to make deposits, withdrawals and print an a
 
 
 ## Running tests
-To test, copy and paste the file path of the 'SpecRunner.html' file located in the root directory into the url bar of a browser of your choice.
+To test, copy and paste the file path of the 'SpecRunner.html' file located in the root directory of this repo into the url bar of a browser of your choice.
 
 ###### *© Fifolu Akinyemi*
